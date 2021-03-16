@@ -1,3 +1,5 @@
+Este proyecto tiene la funcionalodad de ejecutar las pruebas automatizadas para las apis de la empresa Naiofy
+
 Para ejecutar el proyecto deberá tener las siguientes configuraciones en su entorno de desarrollo 
 Debe tener en cuenta configurar las variables de entorno correspondientes a cada uno de los siguientes puntos
 **Tener instalado el JDK de java
