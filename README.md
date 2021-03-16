@@ -2,7 +2,7 @@
 <div>
   <h1>Naiofy</h1>
   <p>
-    <br>Proyecto Gradle creado con el patron de diseño Screenplay, en el cual se ejecutan pruebas para las apis de la empresa Naiofy y la validación de la funcionalidad de las mismas.<br>
+    <br>Proyecto Gradle creado con el patrón de diseño Screenplay, en el cual se ejecutan pruebas para las apis de la empresa Naiofy y la validación de la funcionalidad de estas.<br>
     Para ejecutar el proyecto deberá tener las siguientes configuraciones en su entorno de desarrollo:
     Debe tener en cuenta configurar las variables de entorno correspondientes a cada uno de los siguientes puntos<br>
     **Tener instalado el JDK de java<br>
