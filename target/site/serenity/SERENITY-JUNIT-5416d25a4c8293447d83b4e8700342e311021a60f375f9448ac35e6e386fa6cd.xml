@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Invalidate sessions" skipped="0" tests="4" time="6.19" timestamp="2021-03-15 09:22:25"><testcase name="Invalidate sessions"/><testcase name="Invalidate sessions rol regular"><failure message="&#10;Expected: &lt;401&gt;&#10;     but: was &lt;200&gt;" type="java.lang.AssertionError">
+Expected: &lt;401&gt;
+     but: was &lt;200&gt;</failure><system-err>
+Expected: &lt;401&gt;
+     but: was &lt;200&gt;&#13;
+com.nanofy.apis.stepdefinitions.ListUsersStepsDefinitions.theUserValidateThatTheInformationIsNotDisplayed(ListUsersStepsDefinitions.java:73)&#13;
+✽.the user validate that the information is not displayed correctly(src/test/resources/features/invalidate_sessions.feature:15)&#13;
+</system-err></testcase><testcase name="Consult list purchased albums others validations"/></testsuite>

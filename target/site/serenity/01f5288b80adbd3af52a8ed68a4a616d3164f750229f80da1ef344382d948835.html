@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Serenity Reports</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+
+
+        $('.scenario-result-table').DataTable({
+
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 25,
+            "language": {
+                searchPlaceholder: "Filter",
+                search: ""
+            }
+        });
+
+        // Results table
+        $('#test-results-table').DataTable({
+            "order": [[0, "asc",], [3, "asc",]],
+            "pageLength": 100,
+            "lengthMenu": [[25, 50, 100, 200, -1], [25, 50, 100, 200, "All"]]
+        });
+
+    })
+    ;
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+
+
+    <div id="contenttop">
+        <div class="middlebg">
+        <span class="breadcrumbs"><a href="index.html">Home</a>
+                > <span
+                    class="truncate-60">Passing Tests</span>
+        </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 15-03-2021 21:44</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+
+                <h2>Passing Tests</h2>
+                <table class='overview'>
+                    <tr>
+                        <td width="375px" valign="top">
+                            <div class="test-count-summary">
+                                <div>
+
+                                45 passing tests
+                                    across 26 scenarios
+
+                                     |
+                                        <a href="01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.csv" title="Download CSV"> <i class="fa fa-download"
+                                                                                        title="Download CSV"></i></a>
+
+
+
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#summary"><i class="fas fa-home"></i> Summary</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#tests"><i class="fas fa-tachometer-alt"></i> Test
+                                            Results</a>
+                                    </li>
+                                </ul>
+
+
+                                <div class="card border">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div id="summary" class="tab-pane fade in active">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                            <div style="width:300px;"
+                                                                 class="chart-container automated-and-manual-results">
+                                                                <div class="ct-chart ct-square"></div>
+                                                            </div>
+                                                            <script>
+
+                                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                                var series = [{meta: 'Passing tests (automated)', value: 45}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
+
+
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </script>
+                                                    </div>
+                                                    <div class="col-sm-8">
+
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Scenarios</th>
+                                                                <th scope="col" colspan="2" class="automated-stats">
+                                                                    Automated
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="01f5288b80adbd3af52a8ed68a4a616d3164f750229f80da1ef344382d948835.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
+                                                                    </td>
+                                                                <td class="automated-stats">45</td>
+                                                                <td class="automated-stats">100%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td colspan="3"><a
+                                                                            href="b964a040ccee2192880812cc5de2c4d0075e3288c1b298b7dda0839367bb26be.html"><i
+                                                                            class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr class="summary-stats">
+                                                                <td class="aggregate-result-count">Total</td>
+                                                                <td class="automated-stats">45</td>
+                                                                <td class="automated-stats"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div id="tests" class="tab-pane fade">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th>feature</th>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="4b23fc308d45aee3e979dc53b1d70d512d7df857cd886be024e9f8d714635220.html">Buy album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="c59095b1a325b22b87c16078b1bf49bc1c463a80eacdcc9bb7dd26a26eade5fe.html">Buy album</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:21:55</td>
+                                                    <td>00:05</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="4b23fc308d45aee3e979dc53b1d70d512d7df857cd886be024e9f8d714635220.html">Buy album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="0745f08dca62cbb9ddf8e7347f093b8065824c8fad39cb401a38f160e5a91473.html">Buy album customer created</a>
+                                                                   (1 example)
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:22:03</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="4b23fc308d45aee3e979dc53b1d70d512d7df857cd886be024e9f8d714635220.html">Buy album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="91efe4f9286427528de8f91b091ea4483a3c6de5c7ff30a789aaf8ee358da6bd.html">Buy album without token</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:05</td>
+                                                    <td>00:00</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="4b23fc308d45aee3e979dc53b1d70d512d7df857cd886be024e9f8d714635220.html">Buy album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="4fedd7c952232e9e333cfc4b221aecfed2bb2e85d281465300716190a329061d.html">Buy album other data validations</a>
+                                                                   (4 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:05</td>
+                                                    <td>00:04</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="4b23fc308d45aee3e979dc53b1d70d512d7df857cd886be024e9f8d714635220.html">Buy album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="d798524a580db7d9c9f151b79a186e26997b5cf8c6e3a5e59ed6f71884bd7785.html">Buy album others token validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:10</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="e2e8476408d2a2aa9572903df87d2129b6d31e21b64a149be96c24f25df7127e.html">Invalidate sessions</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="5416d25a4c8293447d83b4e8700342e311021a60f375f9448ac35e6e386fa6cd.html">Invalidate sessions</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:25</td>
+                                                    <td>00:04</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="e2e8476408d2a2aa9572903df87d2129b6d31e21b64a149be96c24f25df7127e.html">Invalidate sessions</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="0a29fbfbe1d72e40549e6b282be13b00397bd035f58b983bfef5c400cc9e8f0f.html">Consult list purchased albums others validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:30</td>
+                                                    <td>00:00</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="6ecae39708b661d51f09080de2fa98fe3233ac6c60b0f55b1d6f7fbf7496c28e.html">Consult list albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="79b40ecd2b5361998f2a13dc9fbb360b8059b008fbb163118c100a796f0bb420.html">Consult albums</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:22:42</td>
+                                                    <td>00:05</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="6ecae39708b661d51f09080de2fa98fe3233ac6c60b0f55b1d6f7fbf7496c28e.html">Consult list albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="726fe166ce99684a0f207b8914d9aa3da98852b1bf13ccbb3e970c9ee19514fb.html">Consult albums others validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:49</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="6ecae39708b661d51f09080de2fa98fe3233ac6c60b0f55b1d6f7fbf7496c28e.html">Consult list albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="0b81c81bdad9e09978678cdf86123489261f36874f3592b122b349422ea7c6a3.html">Consult albums without token</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:22:50</td>
+                                                    <td>00:00</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8db6ab41c5a7664f32c586fdbac5d91f525ce75eccb883d733ddf500bb1c514e.html">Consult list photos of the album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="3fd44d2a67c68d09e64514b5854150bf82284bfa79029fd6191d58cddf29ed66.html">Consult photos</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:23:00</td>
+                                                    <td>00:05</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8db6ab41c5a7664f32c586fdbac5d91f525ce75eccb883d733ddf500bb1c514e.html">Consult list photos of the album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="d6bae6cb39d38b96f76a395573ae74ad3e5fb172780e37f5c4b662a15de333f0.html">Consult photos others validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:23:06</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8db6ab41c5a7664f32c586fdbac5d91f525ce75eccb883d733ddf500bb1c514e.html">Consult list photos of the album</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="9786c6d3586da0d1f22890df697a9b3ec8d17f8fdb435f3701b067ac15f2a7b6.html">Consult photos without token</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:23:07</td>
+                                                    <td>00:00</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="00da4e6149fd327b88ab29563cff197f086fae054f5806a5e3a2fcbc8f57863f.html">Consult list purchased albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="f2d646738a3036760d20c3e758cb08da917a32066b94d462b6dfbc8c32cb7a92.html">Consult list purchased albums</a>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:23:15</td>
+                                                    <td>00:04</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="00da4e6149fd327b88ab29563cff197f086fae054f5806a5e3a2fcbc8f57863f.html">Consult list purchased albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="393d05a8b66f32ee075365111a70906530ba765027ff5f1d393460e74b185f6a.html">Consult list purchased albums rol regular</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:23:19</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="00da4e6149fd327b88ab29563cff197f086fae054f5806a5e3a2fcbc8f57863f.html">Consult list purchased albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="fb2d75065e843c9f776fc5dd4ea12a904ea507ff04ed285492b65c12106b6088.html">Consult list purchased albums others validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:23:20</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="00da4e6149fd327b88ab29563cff197f086fae054f5806a5e3a2fcbc8f57863f.html">Consult list purchased albums</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="c22e1a1f0aa483b40faa1ab6b6a2184a4a10822747f802e1f88ed9101578efe5.html">Consult list purchased albums without token</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:23:22</td>
+                                                    <td>00:00</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="521fd397ed4a43446a1f11afc5f3a3ca1f910c6d7287aaeedaeafc7bcd3f17f9.html">Consult list users</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="251dc355dd974f93c27691f84234a7fcc4c1cdcf286f4050d0b63cc0ec0177c2.html">Consult users regular</a>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:23:58</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="521fd397ed4a43446a1f11afc5f3a3ca1f910c6d7287aaeedaeafc7bcd3f17f9.html">Consult list users</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="ed4098c05cb495924924a351f5788290706133c644e5cd9f8c7c4c0c69915a8f.html">Consult users with registered users</a>
+                                                                   (1 example)
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:23:59</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="521fd397ed4a43446a1f11afc5f3a3ca1f910c6d7287aaeedaeafc7bcd3f17f9.html">Consult list users</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="db57753617c6e11af2d88109170d7574d83f8c23c48b88ba96ae0cd390e90ac4.html">Consult users others validations</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:24:01</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="521fd397ed4a43446a1f11afc5f3a3ca1f910c6d7287aaeedaeafc7bcd3f17f9.html">Consult list users</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="bdea39716501cefb9284b5f0e4fd9fce49c970b04a8497eb8c83ee9db598bc65.html">Consult users without token</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:24:02</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="67bdaa43a12d0ee7599f37e926598313fd35e1b41b6ed0f21db81e94174e4378.html">Login to the application</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="9cc885dd65e84fafd4e6798b8a0637b5a48479d863320063ea766232db242e60.html">Login to the application</a>
+                                                                   (1 example)
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>21:36:04</td>
+                                                    <td>00:04</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="67bdaa43a12d0ee7599f37e926598313fd35e1b41b6ed0f21db81e94174e4378.html">Login to the application</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="e11b61c505ac0c06af1bf40ea26a6c05df9a5e99dcef15cb3a2625f61e947c27.html">Login to the application alternate cases</a>
+                                                                   (3 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:36:09</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="67bdaa43a12d0ee7599f37e926598313fd35e1b41b6ed0f21db81e94174e4378.html">Login to the application</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="fa61dbfccb809a539a2b0a42ed1e5725e64dc04db69268e90cb7c92ed76da1c8.html">Login to the application mandatory fields</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:36:11</td>
+                                                    <td>00:01</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="74d17aec57a3c2a4483ad3bf6bafe55af9f375a8909535ffc85ef70a7346658f.html">Register client</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="8780847c64f56356bb1387c8b5f9890e94992e8ba6bf87f88bda07e2dc002036.html">Register new client</a>
+                                                                   (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:44:12</td>
+                                                    <td>00:04</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="74d17aec57a3c2a4483ad3bf6bafe55af9f375a8909535ffc85ef70a7346658f.html">Register client</a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="ae34123e153491bb805f7a4fc1f55cc65d8a2a16a4f5d9d0c2baf4cde80fa471.html">Register new client mandatory fields</a>
+                                                                   (4 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>21:44:21</td>
+                                                    <td>00:02</td>
+                                                    <td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                            style="display:none">SUCCESS</span></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.0.23</span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

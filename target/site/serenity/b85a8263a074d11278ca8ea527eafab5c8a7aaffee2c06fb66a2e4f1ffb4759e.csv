@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Consult list purchased albums","Consult list purchased albums","SUCCESS","2021-03-15T21:23:15.499-05:00[America/Bogota]","0.0","4.23"
+"Consult list purchased albums","Consult list purchased albums rol regular","SUCCESS","2021-03-15T21:23:19.734-05:00[America/Bogota]","0.0","1.14"
+"Consult list purchased albums","Consult list purchased albums others validations","SUCCESS","2021-03-15T21:23:20.879-05:00[America/Bogota]","0.0","1.09"
+"Consult list purchased albums","Consult list purchased albums without token","SUCCESS","2021-03-15T21:23:22.629-05:00[America/Bogota]","0.0","0.48"

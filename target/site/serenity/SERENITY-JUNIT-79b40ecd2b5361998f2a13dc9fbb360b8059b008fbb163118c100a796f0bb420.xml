@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Consult list albums" skipped="0" tests="5" time="7.09" timestamp="2021-03-15 09:22:42"><testcase name="Consult albums"/><testcase name="Consult albums others validations"/><testcase name="Consult albums without token"/></testsuite>

@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login to the application","Login to the application","SUCCESS","2021-03-15T21:36:04.733-05:00[America/Bogota]","0.0","4.01"
+"Login to the application","Login to the application alternate cases","SUCCESS","2021-03-15T21:36:09.413-05:00[America/Bogota]","0.0","1.6"
+"Login to the application","Login to the application mandatory fields","SUCCESS","2021-03-15T21:36:11.066-05:00[America/Bogota]","0.0","1.08"

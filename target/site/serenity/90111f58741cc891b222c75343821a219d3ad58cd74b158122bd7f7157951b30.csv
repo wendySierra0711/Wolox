@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Consult list albums","Consult albums","SUCCESS","2021-03-15T21:22:42.983-05:00[America/Bogota]","0.0","5.55"
+"Consult list albums","Consult albums others validations","SUCCESS","2021-03-15T21:22:49.137-05:00[America/Bogota]","0.0","1.03"
+"Consult list albums","Consult albums without token","SUCCESS","2021-03-15T21:22:50.214-05:00[America/Bogota]","0.0","0.51"

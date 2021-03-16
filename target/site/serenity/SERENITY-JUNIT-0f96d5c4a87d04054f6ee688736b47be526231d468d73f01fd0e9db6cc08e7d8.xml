@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Consult list users" skipped="0" tests="6" time="9.04" timestamp="2021-03-15 09:23:54"><testcase name="Consult users administrator"><error message="#: #/previous_page: expected type: Number, found: Null" type="org.everit.json.schema.ValidationException">#: #/previous_page: expected type: Number, found: Null</error><system-err>#: #/previous_page: expected type: Number, found: Null&#13;
+org.everit.json.schema.ValidationException.prepend(ValidationException.java:214)&#13;
+org.everit.json.schema.ValidationException.prepend(ValidationException.java:193)&#13;
+org.everit.json.schema.ObjectSchema.lambda$testProperties$7(ObjectSchema.java:322)&#13;
+org.everit.json.schema.ObjectSchema.testProperties(ObjectSchema.java:322)&#13;
+org.everit.json.schema.ObjectSchema.validate(ObjectSchema.java:384)&#13;
+com.nanofy.apis.stepdefinitions.LoginUserStepsDefinitions.theUserValidatesJsonSchema(LoginUserStepsDefinitions.java:68)&#13;
+✽.the user validates json schema for user(src/test/resources/features/list_users.feature:11)&#13;
+</system-err></testcase><testcase name="Consult users regular"/><testcase name="Consult users with registered users"/><testcase name="Consult users others validations"/><testcase name="Consult users without token"/></testsuite>

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "properties": {
+    "": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Photos" }
+    }
+  },
+  "definitions": {
+    "Photos": {
+      "type": "object",
+      "required": ["user_id","id","title","url","thumbnail_url"],
+      "properties": {
+        "album_id": {
+          "type": "number"
+        },
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        }
+      ,
+        "url": {
+          "type": "string"
+        }
+      ,
+        "thumbnail_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

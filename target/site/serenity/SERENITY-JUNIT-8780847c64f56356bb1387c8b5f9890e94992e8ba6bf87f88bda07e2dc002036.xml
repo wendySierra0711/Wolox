@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Register client" skipped="0" tests="13" time="9.75" timestamp="2021-03-15 09:44:12"><testcase name="Register new client"/><testcase name="Register new client alternate cases"><failure message="&#10;Expected: &lt;422&gt;&#10;     but: was &lt;201&gt;" type="java.lang.AssertionError">
+Expected: &lt;422&gt;
+     but: was &lt;201&gt;</failure><system-err>
+Expected: &lt;422&gt;
+     but: was &lt;201&gt;&#13;
+com.nanofy.apis.stepdefinitions.RegisterClientStepsDefinitions.theUserValidatesThatAndIsDisplayed(RegisterClientStepsDefinitions.java:49)&#13;
+✽.the user validates that the error and error is displayed correctly(src/test/resources/features/register_client.feature:23)&#13;
+</system-err></testcase><testcase name="Register new client mandatory fields"/></testsuite>

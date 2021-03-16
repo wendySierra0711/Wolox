@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Register client","Register new client","SUCCESS","2021-03-15T21:44:12.417-05:00[America/Bogota]","0.0","4.41"
+"Register client","Register new client alternate cases","FAILURE","2021-03-15T21:44:17.402-05:00[America/Bogota]","0.0","3.29"
+"Register client","Register new client mandatory fields","SUCCESS","2021-03-15T21:44:21.492-05:00[America/Bogota]","0.0","2.05"

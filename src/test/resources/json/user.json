@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "page": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Page" }
+    },
+    "count":{
+      "type": "number"
+    },
+    "limit":{
+      "type": "number"
+    },
+    "offset": {
+      "type": "number"
+    },
+    "total_pages":{
+      "type": "number"
+    },
+    "total_count": {
+      "type": "number"
+    },
+    "previous_page":{
+      "type": "number"
+    },
+    "current_page": {
+      "type": "number"
+    },
+    "next_page": {
+      "type": "number"
+    },
+    "previous_page_link":{
+      "type": "string"
+    },
+    "current_page_link":{
+      "type": "string"
+    },
+    "next_page_link":{
+      "type": "string"
+    },
+    "first_page_link": {
+      "type": "string"
+    },
+    "last_page_link":{
+      "type": "string"
+    },
+    "n_page_link": {
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "Page": {
+      "type": "object",
+      "required": [ "first_name", "last_name","email","role"],
+      "properties": {
+        "first_name": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

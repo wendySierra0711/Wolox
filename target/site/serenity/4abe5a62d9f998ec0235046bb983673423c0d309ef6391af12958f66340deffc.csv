@@ -1,0 +1,6 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Buy album","Buy album","SUCCESS","2021-03-15T21:21:55.965-05:00[America/Bogota]","0.0","5.37"
+"Buy album","Buy album customer created","SUCCESS","2021-03-15T21:22:03.828-05:00[America/Bogota]","0.0","1.18"
+"Buy album","Buy album without token","SUCCESS","2021-03-15T21:22:05.042-05:00[America/Bogota]","0.0","0.52"
+"Buy album","Buy album other data validations","SUCCESS","2021-03-15T21:22:05.562-05:00[America/Bogota]","0.0","4.64"
+"Buy album","Buy album others token validations","SUCCESS","2021-03-15T21:22:10.272-05:00[America/Bogota]","0.0","1.01"

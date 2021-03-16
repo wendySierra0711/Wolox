@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "properties": {
+    "": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Albums" }
+    }
+  },
+  "definitions": {
+    "Albums": {
+      "type": "object",
+      "required": ["user_id","id","title"],
+      "properties": {
+        "user_id": {
+          "type": "number"
+        },
+        "id": {
+          "type": "number"
+        },
+        "title": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
