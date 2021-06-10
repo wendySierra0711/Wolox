@@ -12,6 +12,7 @@ Feature: Buy album
       | rol           | id |
       | administrator | 28  |
       | regular       | 27  |
+      sdgjdskv
 
   Scenario Outline: Buy album customer created
     Given the user wants to login to the application
