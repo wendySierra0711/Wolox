@@ -3,7 +3,7 @@ Feature: Buy album
   As a user of the Naiofy app
   I want to buy an album
   So verify the functionality
-
+  @buyalbum
   Scenario Outline: Buy album
     Given the login in the application with <rol> role
     When the user buy album with <id>
